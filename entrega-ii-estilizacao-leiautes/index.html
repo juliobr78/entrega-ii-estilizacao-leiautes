@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrega II – Estilização e Leiautes</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="#" class="brand">Minha Marca</a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu-list">
+          <span class="sr-only">Abrir menu</span>
+          <span class="hamburger"></span>
+        </button>
+        <ul id="menu-list" class="menu-list">
+          <li><a href="#">Home</a></li>
+          <li class="has-sub">
+            <a href="#">Projetos</a>
+            <ul class="submenu">
+              <li><a href="#">Web</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Outros</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="hero">
+      <h1>Entrega II — Estilização e Leiautes</h1>
+      <p class="lead">Interface responsiva com design system, grid 12 colunas e componentes prontos.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+        <a class="btn btn-outline" href="#">Salvar</a>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Resumo</h3>
+        <p>Conteúdo demonstrando cards e sistema de badges.</p>
+        <div class="badges">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">Acessibilidade</span>
+        </div>
+      </div>
+    </aside>
+
+    <section id="projetos" class="projects">
+      <h2>Projetos</h2>
+      <div class="projects-grid">
+        <article class="card project-card">
+          <img src="assets/images/placeholder.jpg" alt="minha thumbnail">
+          <div class="card-body">
+            <h3>Projeto A</h3>
+            <p>Descrição breve do projeto.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Meu Portfólio</p>
+    </div>
+  </footer>
+</body>
+</html>
