@@ -1,5 +1,17 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font-sans); background: var(--color-background); color: var(--color-text); line-height: 1.5; }
-.container { max-width: 1200px; margin: auto; padding: var(--space-2); }
-h1, h2, h3 { color: var(--color-primary); }
-a { text-decoration: none; }
+.site-footer {
+  background: var(--color-primary-700);
+  color: var(--color-neutral-50);
+  padding: var(--space-3);
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--color-secondary-100);
+  margin: 0 var(--space-1);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.site-footer a:hover {
+  color: var(--color-secondary-500);
+}
