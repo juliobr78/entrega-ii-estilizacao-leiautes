@@ -1,20 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Entrega II – Estilização e Leiautes</title>
-  <link rel="stylesheet" href="variables.css">
-  <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="components.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio – Estilização II</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-grid">
-      <!-- Logo da marca -->
       <a href="#" class="brand">
-        <img src="ima1.jpg" alt="Logo da marca" class="logo">
-        Minha Marca
+        <img src="assets/images/ima1.jpg" alt="Logo" class="logo">
+        Meu Portfólio
       </a>
 
       <nav class="main-nav" aria-label="Menu principal">
@@ -39,47 +38,54 @@
     </div>
   </header>
 
-  <main class="container main-grid">
-    <!-- Seção com fundo (usa ima2 como banner) -->
-    <section class="hero" style="background-image: url('ima2.jpg'); background-size: cover; background-position: center; color: white; padding: 80px 20px; border-radius: 12px;">
-      <h1>Entrega II — Estilização e Leiautes</h1>
-      <p class="lead">Interface responsiva com design system, grid 12 colunas e componentes prontos.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projetos">Ver projetos</a>
-        <a class="btn btn-outline" href="#">Salvar</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Meu Portfólio Moderno</h1>
+        <p>Interface responsiva, elegante e profissional usando CSS Grid e Flexbox.</p>
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="#" class="btn btn-outline">Saiba Mais</a>
+        </div>
       </div>
     </section>
 
-    <aside class="sidebar">
-      <div class="card">
-        <h3>Resumo</h3>
-        <p>Conteúdo demonstrando cards e sistema de badges.</p>
-        <div class="badges">
-          <span class="badge">HTML</span>
-          <span class="badge">CSS</span>
-          <span class="badge">Acessibilidade</span>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Seção de projetos -->
-    <section id="projetos" class="projects">
-      <h2>Projetos</h2>
+    <section id="projetos" class="projects container">
+      <h2>Meus Projetos</h2>
       <div class="projects-grid">
         <article class="card project-card">
-          <img src="ima2.jpg" alt="Imagem do Projeto">
+          <img src="assets/images/ima2.jpg" alt="Projeto 1">
           <div class="card-body">
             <h3>Projeto A</h3>
-            <p>Descrição breve do projeto.</p>
+            <p>Descrição do projeto com layout moderno e responsivo.</p>
+          </div>
+        </article>
+        <article class="card project-card">
+          <img src="assets/images/ima3.jpg" alt="Projeto 2">
+          <div class="card-body">
+            <h3>Projeto B</h3>
+            <p>Outro projeto com design elegante e cores modernas.</p>
+          </div>
+        </article>
+        <article class="card project-card">
+          <img src="assets/images/ima4.jpg" alt="Projeto 3">
+          <div class="card-body">
+            <h3>Projeto C</h3>
+            <p>Layout responsivo, fácil de navegar e visual limpo.</p>
           </div>
         </article>
       </div>
+    </section>
+
+    <section class="about container">
+      <h2>Sobre Mim</h2>
+      <p>Sou estudante de desenvolvimento web e adoro criar interfaces modernas e funcionais.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 — Meu Portfólio</p>
+      <p>© 2025 – Meu Portfólio</p>
     </div>
   </footer>
 </body>
