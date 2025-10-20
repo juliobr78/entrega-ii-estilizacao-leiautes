@@ -4,14 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Entrega II – Estilização e Leiautes</title>
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-grid">
-      <a href="#" class="brand">Minha Marca</a>
+      <!-- Logo da marca -->
+      <a href="#" class="brand">
+        <img src="ima1.jpg" alt="Logo da marca" class="logo">
+        Minha Marca
+      </a>
+
       <nav class="main-nav" aria-label="Menu principal">
         <button class="nav-toggle" aria-expanded="false" aria-controls="menu-list">
           <span class="sr-only">Abrir menu</span>
@@ -35,7 +40,8 @@
   </header>
 
   <main class="container main-grid">
-    <section class="hero">
+    <!-- Seção com fundo (usa ima2 como banner) -->
+    <section class="hero" style="background-image: url('ima2.jpg'); background-size: cover; background-position: center; color: white; padding: 80px 20px; border-radius: 12px;">
       <h1>Entrega II — Estilização e Leiautes</h1>
       <p class="lead">Interface responsiva com design system, grid 12 colunas e componentes prontos.</p>
       <div class="hero-actions">
@@ -56,11 +62,12 @@
       </div>
     </aside>
 
+    <!-- Seção de projetos -->
     <section id="projetos" class="projects">
       <h2>Projetos</h2>
       <div class="projects-grid">
         <article class="card project-card">
-          <img src="assets/images/placeholder.jpg" alt="minha thumbnail">
+          <img src="ima2.jpg" alt="Imagem do Projeto">
           <div class="card-body">
             <h3>Projeto A</h3>
             <p>Descrição breve do projeto.</p>
