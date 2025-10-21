@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Entrega II – Estilização e Leiautes</title>
   <style>
-    /* VARIÁVEIS DE CORES */
     :root {
       --cor-primaria: #6366f1;
       --cor-secundaria: #ec4899;
@@ -21,7 +20,6 @@
       --cor-texto-secundario: #cbd5e1;
     }
 
-    /* RESET E BASE */
     * {
       margin: 0;
       padding: 0;
@@ -41,7 +39,6 @@
       padding: 0 20px;
     }
 
-    /* HEADER */
     .site-header {
       background: var(--cor-fundo-claro);
       padding: 1rem 0;
@@ -127,7 +124,11 @@
       margin: 0.5rem 0;
     }
 
-    /* HAMBURGUER */
+    .dropdown-menu a {
+      color: var(--cor-texto);
+      text-decoration: none;
+    }
+
     .hamburger {
       display: none;
       flex-direction: column;
@@ -182,7 +183,6 @@
       background: var(--cor-fundo);
     }
 
-    /* HERO */
     .hero {
       padding: 6rem 0;
       text-align: center;
@@ -199,9 +199,9 @@
       right: 0;
       bottom: 0;
       background: 
-        radial-gradient(circle at 20% 50%, var(--cor-primaria)20, transparent 50%),
-        radial-gradient(circle at 80% 80%, var(--cor-secundaria)20, transparent 50%);
-      opacity: 0.1;
+        radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.2), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.2), transparent 50%);
+      opacity: 0.3;
     }
 
     .hero-title {
@@ -228,7 +228,6 @@
       position: relative;
     }
 
-    /* BADGES */
     .badge {
       display: inline-block;
       padding: 0.35rem 0.75rem;
@@ -252,7 +251,6 @@
       color: white;
     }
 
-    /* BOTÕES */
     .btn {
       display: inline-block;
       padding: 0.75rem 1.5rem;
@@ -296,7 +294,6 @@
       font-size: 1.125rem;
     }
 
-    /* SECTIONS */
     section {
       padding: 4rem 0;
     }
@@ -318,7 +315,6 @@
       font-size: 1.125rem;
     }
 
-    /* PROJETOS */
     .projects {
       background: var(--cor-fundo-claro);
     }
@@ -348,15 +344,17 @@
       overflow: hidden;
     }
 
-    .card-image img {
+    .card-image img,
+    .card-image svg {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s;
     }
 
-    .card:hover .card-image img {
-      transform: scale(1.1);
+    .card:hover .card-image img,
+    .card:hover .card-image svg {
+      transform: scale(1.05);
     }
 
     .card-badge {
@@ -373,6 +371,7 @@
       display: flex;
       gap: 0.5rem;
       margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
 
     .tag {
@@ -383,22 +382,22 @@
     }
 
     .tag-primary {
-      background: var(--cor-primaria)30;
+      background: rgba(99, 102, 241, 0.2);
       color: var(--cor-primaria);
     }
 
     .tag-secondary {
-      background: var(--cor-secundaria)30;
+      background: rgba(236, 72, 153, 0.2);
       color: var(--cor-secundaria);
     }
 
     .tag-info {
-      background: var(--cor-senaria)30;
+      background: rgba(6, 182, 212, 0.2);
       color: var(--cor-senaria);
     }
 
     .tag-success {
-      background: var(--cor-terciaria)30;
+      background: rgba(16, 185, 129, 0.2);
       color: var(--cor-terciaria);
     }
 
@@ -417,7 +416,6 @@
       text-align: center;
     }
 
-    /* SOBRE */
     .about {
       background: var(--cor-fundo);
     }
@@ -456,7 +454,6 @@
       transition: width 0.5s;
     }
 
-    /* CONTATO */
     .contact {
       background: var(--cor-fundo-claro);
     }
@@ -509,7 +506,6 @@
       font-family: inherit;
     }
 
-    /* FOOTER */
     .site-footer {
       background: var(--cor-fundo);
       padding: 3rem 0 1rem;
@@ -553,6 +549,7 @@
     .social-links {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .social-link {
@@ -576,7 +573,6 @@
       color: var(--cor-texto-secundario);
     }
 
-    /* MODAL */
     .modal {
       display: none;
       position: fixed;
@@ -599,6 +595,7 @@
       padding: 2rem;
       border-radius: 12px;
       max-width: 500px;
+      width: 90%;
       position: relative;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
@@ -613,6 +610,7 @@
       color: var(--cor-texto);
       cursor: pointer;
       transition: color 0.3s;
+      line-height: 1;
     }
 
     .modal-close:hover {
@@ -629,7 +627,6 @@
       color: var(--cor-texto-secundario);
     }
 
-    /* ALERT */
     .alert {
       position: fixed;
       top: 2rem;
@@ -643,6 +640,7 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       z-index: 1500;
       border-left: 4px solid var(--cor-senaria);
+      max-width: 400px;
     }
 
     .alert-icon {
@@ -651,6 +649,7 @@
 
     .alert-message {
       color: var(--cor-texto);
+      flex: 1;
     }
 
     .alert-close {
@@ -660,13 +659,13 @@
       color: var(--cor-texto-secundario);
       cursor: pointer;
       transition: color 0.3s;
+      line-height: 1;
     }
 
     .alert-close:hover {
       color: var(--cor-setenaria);
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-desktop {
         display: none;
@@ -674,6 +673,10 @@
 
       .hamburger {
         display: flex;
+      }
+
+      .hero {
+        padding: 4rem 0;
       }
 
       .hero-title {
@@ -703,18 +706,21 @@
       .alert {
         left: 1rem;
         right: 1rem;
+        top: 1rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <!-- HEADER COM MENU HAMBURGUER -->
   <header class="site-header">
     <div class="container">
       <div class="header-content">
         <div class="logo">Meu Portfólio</div>
         
-        <!-- Menu Desktop -->
         <nav class="nav-desktop">
           <ul class="nav-list">
             <li><a href="#home" class="nav-link">Home</a></li>
@@ -731,7 +737,6 @@
           </ul>
         </nav>
 
-        <!-- Botão Hamburguer Mobile -->
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span>
           <span></span>
@@ -740,7 +745,6 @@
       </div>
     </div>
 
-    <!-- Menu Mobile -->
     <nav class="nav-mobile" id="navMobile">
       <ul class="nav-mobile-list">
         <li><a href="#home" class="nav-mobile-link">Home</a></li>
@@ -751,7 +755,6 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
   <section id="home" class="hero">
     <div class="container">
       <span class="badge badge-primary">Novidade</span>
@@ -764,7 +767,6 @@
     </div>
   </section>
 
-  <!-- PROJETOS SECTION -->
   <section id="projetos" class="projects">
     <div class="container">
       <h2 class="section-title">Meus Projetos</h2>
@@ -862,7 +864,6 @@
     </div>
   </section>
 
-  <!-- SOBRE SECTION -->
   <section id="sobre" class="about">
     <div class="container">
       <h2 class="section-title">Sobre Mim</h2>
@@ -891,7 +892,6 @@
     </div>
   </section>
 
-  <!-- CONTATO SECTION -->
   <section id="contato" class="contact">
     <div class="container">
       <h2 class="section-title">Entre em Contato</h2>
@@ -915,4 +915,4 @@
           <select id="assunto" name="assunto" class="form-select">
             <option value="">Selecione um assunto</option>
             <option value="projeto">Novo Projeto</option>
-            <option value="duvida">Dúvida
+            <option value="duvida">Dúvida</option
